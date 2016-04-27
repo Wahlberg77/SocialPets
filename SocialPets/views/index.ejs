@@ -1,0 +1,33 @@
+﻿<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Social Pets</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-heart"></span> Social Pets</h1>
+				<img src="http://tvoydosug.com/wp-content/uploads/2015/02/Crazy-Dog-Face-22.jpg">
+				
+        <p>Login or Register with:</p>
+
+        <a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+    </div>
+
+</div>
+
+
+  <footer>
+    <% include ../views/partials/footer %>
+  </footer>
+  
+</body>
+</html>

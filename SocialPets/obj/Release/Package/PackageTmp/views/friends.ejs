@@ -1,0 +1,40 @@
+﻿<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+  <% include ../views/partials/head %>
+</head>
+
+  <body>
+    
+    <div class="container">
+      <header>
+        <% include ../views/partials/header2 %>
+    </header>
+
+      <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-12">
+          <div class="well">
+            <h3>
+              <span class="fa fa-user"></span> <%= user.local.userName %>´s friends pictures
+            </h3>
+            <p>Collect all of your superdupercute pictures of all your ugly friends pets here! </p>
+
+            <form method="post" enctype="multipart/form-data" action="/profile">
+              <input type="file" name="friend">
+                </br>
+                <input type="submit" value="Upload"> Hit upload!
+                       
+											</form>
+          </div>
+        </div>
+      </div>
+  </body>
+
+  <footer>
+    <% include ../views/partials/footer %>
+  </footer>
+  
+</html>

@@ -1,0 +1,104 @@
+﻿<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+  <% include ../views/partials/head %>
+</head>
+
+  <body>
+    
+    <div class="container">
+      <header>
+        <% include ../views/partials/header %>
+    </header>
+
+
+
+
+      <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>
+              <span class="fa fa-user"></span> <%= user.local.userName %>´s pictures
+            </h3>
+
+            <form method="post" enctype="multipart/form-data" action="/profile">
+              <input type="file" name="thumbnail">
+                </br>
+                <input type="submit" value="Upload"> Hit upload!
+                       
+											</form>
+          </div>
+        </div>
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+          <div class="well">
+            <h3>
+              <span class="fa fa-user"></span> User Profile
+            </h3>
+
+            <p>
+              <strong>Pets name</strong>: <%= user.local.userName %><br>
+                <strong>Email</strong>: <%= user.local.email %><br>
+                  <strong>Funny facts</strong>: <%= user.local.funnyFacts %><br>
+                    <strong>Favorite food</strong>: <%= user.local.food %><br>
+                      <strong>Date of birth</strong>: <%= user.local.birth %><br>
+
+                        <!--<a href="/edit" class="btn btn-default btn-sm">Edit Page</a>-->
+                      </p>
+
+            <!--Test for edit!-->
+            <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">
+              Edit your profile
+            </button>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Edit your profile</h4>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/edit" method="post">
+                      User name: <input type="text" class="form-control" name="userName">
+                        <br />
+                        Favorite food: <input type="text" class="form-control" name="food">
+                          <br />
+                          Funny facts: <input type="text" class="form-control" name="funnyFacts">
+                            <br />
+                            Date of birth: <input type="text" class="form-control" name="birth">
+                              <br />
+                            </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <input type="submit" button="" type="button" class="btn btn-primary">
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <img>
+              <%= user.local.profileImage %>
+            </img>
+          </div>
+        </div>
+      </div>
+  </body>
+  
+  <footer>
+    <% include ../views/partials/footer %>
+  </footer>
+  
+</html>

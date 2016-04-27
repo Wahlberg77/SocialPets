@@ -1,0 +1,46 @@
+﻿<!-- views/profile/edit.ejs -->
+<!doctype html>
+<html>
+<head>
+  <title>Social Pets</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <style>
+    body {
+      padding-top: 80px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="page-header text-center">
+      <h1><span class="fa fa-heart"></span> Social Pets - Edit your profile</h1>
+      <a href="/profile" class="btn btn-default btn-sm">Profile Page</a>
+    </div>
+
+    <div class="row">
+
+      <!-- LOCAL INFORMATION -->
+      <div class="col-sm-6">
+        <div class="well">
+          <h3><span class="fa fa-user"></span> Edit user profile</h3>
+
+          <form action="/edit" method="post">
+            User name: <input type="text" class="form-control" name="userName">
+            <br />
+            Favorite food: <input type="text" class="form-control" name="food">
+            <br />
+            Funny facts: <input type="text" class="form-control" name="funnyFacts">
+            <br />
+              Date of birth: <input type="text" class="form-control" name="birth">
+                <br />
+            <input type="submit" class="btn btn-warning" value="Save">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
